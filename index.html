@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
+
+    <link rel="stylesheet" href="stlye.css">
+
 </head>
 <body>
 
@@ -15,12 +18,35 @@
             <h1>Entrar</h1>
 
             <div class="label-float"> 
-                <input type="text">
+
+                <input type="text" id="usuario" placeholder="">
+                <label for="usuario">Usuario</label>
             </div>
+
+            <div class="label-float"> 
+
+                <input type="password" id="senha" placeholder="">
+                <label for="senha">Senha</label>
+            </div>
+
+            <div class="justify-content"> 
+                <button>Entar</button>
+            </div>
+
+
+            <div class="justify-content">
+                <hr>
+            </div>
+
+            <p> Não tem uma conta? 
+                <a href=""> Cadastre-se</a>
+            </p>
 
 
         </div>
     </div>
-    
+
+    <script src="script.js"> </script>
+
 </body>
 </html>
