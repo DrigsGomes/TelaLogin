@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de cadastro</title>
 
-    <link rel="stylesheet" href="stlye.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -19,34 +19,31 @@
 
             <div class="label-float"> 
 
-                <input type="text" id="nome" placeholder="">
+                <input type="text" id="nome" placeholder="" required>
                 <label for="nome">Nome</label>
             </div>
 
             <div class="label-float"> 
 
-                <input type="text" id="usuario" placeholder="">
+                <input type="text" id="usuario" placeholder="" required>
                 <label for="usuario">Usuario</label>
             </div>
 
             <div class="label-float"> 
 
-                <input type="password" id="senha" placeholder="">
+                <input type="password" id="senha" placeholder="" required>
                 <label for="senha">Senha</label>
             </div>
 
+            <div class="label-float"> 
+
+                <input type="password" id="confirmSenha" placeholder="" required>
+                <label for="confirmSenha">Confirmar senha</label>
+            </div>
+
             <div class="justify-center"> 
-                <button>Entar</button>
+                <button>Cadastrar</button>
             </div>
-
-
-            <div class="justify-center">
-                <hr>
-            </div>
-
-            <p> Não tem uma conta? 
-                <a href=""> Cadastre-se</a>
-            </p>
 
 
         </div>
