@@ -122,3 +122,12 @@ a{
 a:hover{
     color: #272262;
 }
+
+
+.fa-eye-slash{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: #272262;
+}
