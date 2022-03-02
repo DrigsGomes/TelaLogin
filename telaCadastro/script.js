@@ -16,6 +16,9 @@ let confirmSenha = document.querySelector('#confirmSenha');
 let labelConfirmSenha = document.querySelector('#labelConfirmSenha');
 let validConfirmSenha = false;
 
+let msgError = document.querySelector('#msgError');
+let msgSuccess = document.querySelector('#msgSuccess');
+
 
 let verSenha = document.querySelector("#verSenha");
 let btnConfirm = document.querySelector("#verConfirmSenha");
@@ -95,7 +98,7 @@ confirmSenha.addEventListener('keyup', () => {
 
 
     }
-    
+
   })
   
 
@@ -104,8 +107,30 @@ confirmSenha.addEventListener('keyup', () => {
 function cadastrar (){
     if(validNome && validUsuario && validSenha && validConfirmSenha){
 
-    }else{
+        let listaUser = JSON.parse(localStorage.getItem('listaUser' || []));
 
+        listaUser.push(
+            {
+                nomeCad: nome.value,
+                userCad: usuario.value,
+                senhaCad: senha.value,
+
+            }
+        )
+
+        localStorage.setItem('listaUser', JSON.stringify(listaUser))
+
+
+        msgSuccess.setAttribute('style', 'display:block');
+        msgSuccess.innerHTML = '<strong> Cadastrado com sucesso...</strong>'
+        msgError.setAttribute('style', 'display:none');
+        msgError.innerHTML = ''
+
+    }else{
+        msgError.setAttribute('style', 'display:block');
+        msgError.innerHTML = '<strong> Preencha todos os campos corretamente antes de cadastrar!</strong>'
+        msgSuccess.setAttribute('style', 'display:none');
+        msgSuccess.innerHTML = ''
     }
 
 };
